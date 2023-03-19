@@ -4,7 +4,10 @@ Projeto realizado para o terceiro e quarto dia do Workshop 2023.1 da Fábrica de
 
 ![image](https://user-images.githubusercontent.com/104099580/226214569-f9e280d1-9869-41d6-9eef-fa8c95972c04.png)
 
-![image](https://user-images.githubusercontent.com/104099580/226214590-086ccde4-7ea4-4be9-8c2d-73ae97547a49.png)
+<div align="center">
+  <img width="250" src="https://user-images.githubusercontent.com/104099580/226214590-086ccde4-7ea4-4be9-8c2d-73ae97547a49.png">
+  <img width="250" src="https://user-images.githubusercontent.com/104099580/226215126-89f5e7fd-7011-4e4c-a714-886989df3ce1.png">
+</div>
 
 # 💻 Diferenciais no projeto
 
