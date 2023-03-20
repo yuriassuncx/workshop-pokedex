@@ -58,7 +58,7 @@ export function PokemonPage() {
 
       <section className="flex flex-col w-full items-center gap-12 bg-white rounded-t-2xl shadow-2xl drop-shadow-md">
         <img
-          src={pokemon['sprites']['versions']['generation-v']['black-white']['animated']['front_default']}
+          src={pokemon.sprites.versions['generation-v']['black-white'].animated.front_default}
           alt={`Imagem do pokemon: ${pokemon.name}`}
           className="w-52 -mt-24"
         />

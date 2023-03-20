@@ -2,6 +2,18 @@ import { useEffect, useState } from "react";
 
 import axios from "axios";
 
+interface IPokemonSprites {
+  "versions": {
+    "generation-v": {
+      "black-white": {
+        animated: {
+          front_default: string;
+        }
+      }
+    }
+  }
+}
+
 interface Pokemon {
   name: string;
   weight: number;
@@ -14,7 +26,7 @@ interface Pokemon {
       },
     },
   ];
-  sprites: any;
+  sprites: IPokemonSprites;
   types: [
     item: {
       type: {
