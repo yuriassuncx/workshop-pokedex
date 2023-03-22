@@ -7,7 +7,7 @@ interface CardProps {
   url: string;
 }
 
-interface PokemonData extends AxiosResponse {
+interface PokemonsData extends AxiosResponse {
   data: {
     results: CardProps[];
   }
@@ -24,7 +24,7 @@ export function fetchPokemons() {
       try {
         await axios
           .get('https://pokeapi.co/api/v2/pokemon?limit=200')
-          .then((response: PokemonData) => setPokemons(response.data.results))
+          .then((response: PokemonsData) => setPokemons(response.data.results))
           .finally(() => setLoading(false));
       } catch(error) {
         console.log(error);

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 interface IPokemonSprites {
   "versions": {
@@ -44,6 +44,10 @@ interface Pokemon {
   ]
 }
 
+interface PokemonData extends AxiosResponse {
+  data: Pokemon
+}
+
 export function fetchSinglePokemon(slug: string) {
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
   const [loading, setLoading] = useState(false);
@@ -55,7 +59,7 @@ export function fetchSinglePokemon(slug: string) {
       try {
         await axios
           .get(`https://pokeapi.co/api/v2/pokemon/${slug}`)
-          .then((response) => setPokemon(response.data))
+          .then((response: PokemonData) => setPokemon(response.data))
           .finally(() => setLoading(false))
       } catch(error) {
         console.log(error);
