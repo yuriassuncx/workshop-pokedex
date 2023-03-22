@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 interface CardProps {
   name: string;
   url: string;
+}
+
+interface PokemonData extends AxiosResponse {
+  data: {
+    results: CardProps[];
+  }
 }
 
 export function fetchPokemons() {
@@ -17,8 +23,8 @@ export function fetchPokemons() {
 
       try {
         await axios
-          .get('https://pokeapi.co/api/v2/pokemon?limit=99')
-          .then((response) => setPokemons(response.data.results))
+          .get('https://pokeapi.co/api/v2/pokemon?limit=200')
+          .then((response: PokemonData) => setPokemons(response.data.results))
           .finally(() => setLoading(false));
       } catch(error) {
         console.log(error);
